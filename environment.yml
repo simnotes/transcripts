@@ -1,0 +1,6 @@
+name: deepspeech
+dependencies:
+  - numpy
+  - pandas
+  - jupyter
+  - scipy
