@@ -1,6 +1,7 @@
-name: deepspeech
+name: transcripts
 dependencies:
   - numpy
   - pandas
   - jupyter
   - scipy
+  - matplotlib
