@@ -5,3 +5,5 @@ dependencies:
   - jupyter
   - scipy
   - matplotlib
+  - boto3
+  - progressbar2
