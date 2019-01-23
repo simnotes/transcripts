@@ -1,6 +1,7 @@
 # Transcripts for Ultraschall
 
-# Install
+## Install
+
 To use, first install conda:
 
 ```bash
@@ -17,7 +18,7 @@ To activate this environment, use
  To deactivate an active environment, use
 `conda deactivate`
 
-# Import German Common Voice Data
+## Import German Common Voice Data
 
 To download Mozilla Common Voice dataset for german language, run
 `python3 bin/download_corpus_de.py`
