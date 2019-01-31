@@ -56,12 +56,28 @@ Needed python packages (will get installed to conda environment 'transcripts'):
 - swifter
 - sox
 
-## Import German Common Voice Data
+## How to use
 
-To download Mozilla Common Voice dataset for german language, run
-`python3 bin/download_corpus_de.py`
+After finishing installation process (see above), just execute `./prepare_data.sh`. After finishing, you should end up with a new folder `corpora` with following structure:
 
-Afterwards there should be a folder named "corpora/de" in your root project folder, which contains two files:
+$ tree -L 2 corpora 
+corpora
+├── clips.tsv
+├── clips.tsv.zip
+└── de
+    ├── audio  <- contains all the mp3s/wav-files
+    ├── dev_file.csv
+    ├── dev.tsv
+    ├── invalid.tsv
+    ├── other.tsv
+    ├── test_file.csv
+    ├── test.tsv
+    ├── train_file.csv
+    ├── train.tsv
+    └── valid.tsv
 
-- clips.tsv.zip   - zip archive of a tab-seperated file containing all sentences and representing main training data
-- de.zip          - zip archive of all german-recorded mp3-files
+You can now use train_file.csv, dev_file.csv and test_file.csv for training your model.
+
+# TODO:
+
+Add additional scripts to generate binary language model (via kenLM) and alphabet.txt.

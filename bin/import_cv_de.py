@@ -106,7 +106,7 @@ def _cleanup_sentences_wrapper(df):
 
 def _save_df_to_csv(df, filename):
   print("Saving converted files and sentences to csv...")
-  csv_filename = path.splitext(filename)[0] + ".csv"
+  csv_filename = path.splitext(filename)[0] + "_file.csv"
   csv_filepath = path.join(CORPUS_FILES_PATH, csv_filename)
   df.to_csv(
     csv_filepath, header=True
@@ -117,6 +117,7 @@ def _is_executed_from_root_dir():
   if not path.exists("README.md"):
     print("ERROR: Please exec script from root folder! (i.e. \"python bin/import_cv_de.py\")")
     check = False
+  return check
 
 if __name__ == "__main__":
   if _is_executed_from_root_dir():
