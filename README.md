@@ -60,21 +60,21 @@ Needed python packages (will get installed to conda environment 'transcripts'):
 
 After finishing installation process (see above), just execute `./prepare_data.sh`. After finishing, you should end up with a new folder `corpora` with following structure:
 
-$ tree -L 2 corpora 
-corpora
-├── clips.tsv
-├── clips.tsv.zip
-└── de
-    ├── audio  <- contains all the mp3s/wav-files
-    ├── dev_file.csv
-    ├── dev.tsv
-    ├── invalid.tsv
-    ├── other.tsv
-    ├── test_file.csv
-    ├── test.tsv
-    ├── train_file.csv
-    ├── train.tsv
-    └── valid.tsv
+    $ tree -L 2 corpora 
+    corpora
+    ├── clips.tsv
+    ├── clips.tsv.zip
+    └── de
+        ├── audio  <- contains all the mp3s/wav-files
+        ├── dev_file.csv
+        ├── dev.tsv
+        ├── invalid.tsv
+        ├── other.tsv
+        ├── test_file.csv
+        ├── test.tsv
+        ├── train_file.csv
+        ├── train.tsv
+        └── valid.tsv
 
 You can now use train_file.csv, dev_file.csv and test_file.csv for training your model.
 
