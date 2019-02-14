@@ -31,3 +31,6 @@ python bin/create_corpus_de.py
 
 info "Preparing DeepSpeech input data"
 python bin/import_cv_de.py
+
+info "Downloading vocab corpus and generating language model"
+python bin/create_language_model_de.py

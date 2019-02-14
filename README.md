@@ -23,7 +23,7 @@ To activate this environment, use
  To deactivate an active environment, use
 `conda deactivate`
 
-### Installed dependencies:
+### Installed dependencies
 
 Needed for getting files:
 
@@ -37,7 +37,7 @@ Needed for converting mp3-files to wav
 
 Needed for installing kenLM and building language model
 
-- zlib1g-dev 
+- zlib1g-dev
 - libbz2-dev
 - liblzma-dev
 - libeigen3-dev
@@ -60,15 +60,16 @@ Needed python packages (will get installed to conda environment 'transcripts'):
 
 After finishing installation process (see above), just execute `./prepare_data.sh`. After finishing, you should end up with a new folder `corpora` with following structure:
 
-    $ tree -L 2 corpora 
+    $ tree -L 2 corpora
     corpora
     ├── clips.tsv
     ├── clips.tsv.zip
     └── de
-        ├── audio  <- contains all the mp3s/wav-files
+        ├── audio   <- contains all the mp3s/wav-files
         ├── dev_file.csv
         ├── dev.tsv
         ├── invalid.tsv
+        ├── lm      <- contains the language model files
         ├── other.tsv
         ├── test_file.csv
         ├── test.tsv
@@ -78,6 +79,7 @@ After finishing installation process (see above), just execute `./prepare_data.s
 
 You can now use train_file.csv, dev_file.csv and test_file.csv for training your model.
 
-# TODO:
+## TODO
 
-Add additional scripts to generate binary language model (via kenLM) and alphabet.txt.
+- Add additional scripts to generate alphabet.txt
+- Maybe integrate additional sources for lm-generation
