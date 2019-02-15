@@ -122,6 +122,10 @@ def _is_executed_from_root_dir():
 if __name__ == "__main__":
   if _is_executed_from_root_dir():
     for currentfile in FILES_TO_PROCESS:
+      if not path.exists(path.join(CORPUS_FILES_PATH,currentfile)):
+        print("File {} not found. Aborting...".format(currentfile))
+        raise SystemExit
+
       print("\nProcessing {}...".format(currentfile))
 
       df = _load_data_to_df(currentfile)

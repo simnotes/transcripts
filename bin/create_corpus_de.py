@@ -2,6 +2,8 @@
 import subprocess
 from os import path
 
+CORPUS_FILE_PATH = "corpora/clips.tsv"
+
 def _is_executed_from_root_dir():
   check = True
   if not path.exists("README.md"):
@@ -11,5 +13,8 @@ def _is_executed_from_root_dir():
 
 if __name__ == "__main__":
   if _is_executed_from_root_dir():
-    subprocess.run(["create-corpora", "-f", "corpora/clips.tsv", "-d", "corpora", "-l", "de"])
+    if not path.exists(CORPUS_FILE_PATH):
+        print("File {} not found. Aborting...".format(CORPUS_FILE_PATH))
+        raise SystemExit
+    subprocess.run(["create-corpora", "-f", CORPUS_FILE_PATH, "-d", "corpora", "-l", "de"])
     

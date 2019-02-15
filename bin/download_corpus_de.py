@@ -63,7 +63,18 @@ if __name__ == "__main__":
     for fileentry in FILES_TO_DOWNLOAD:
       filename = fileentry["filename"]
       targetfolder = fileentry["targetfolder"]
-      print("Trying to download {}".format(filename))
+      
       filelist = [{"Key": obj['Key'], "Size": int(obj['Size'])} for obj in sorted(objs, key=_get_last_modified) if filename in obj['Key'] and int(obj['Size']) > 100000000]
       # only include files with resonable size (>100MB) in list to suppress errors
+
+      if len(filelist) == 0:
+        print("File {} not found on S3 storage".format(filename))
+        print("Only the following files were available:")
+        for o in objs:
+          size = int(o['Size']) / 1024
+          updated = o['LastModified'].strftime("%Y-%m-%d")
+          print("\tFile: {}\t\tUpdated: {}\t\tSize: {:.2f}kb".format(o['Key'] , updated, size))
+        raise SystemExit
+
+      print("Trying to download {}".format(filename))
       _maybe_download_file(s3, filelist, targetfolder)
