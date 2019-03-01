@@ -7,10 +7,10 @@ from botocore.client import Config
 from os import path, makedirs
 from zipfile import ZipFile
 
-REGION_NAME = 'us-east-2'
-BUCKET_NAME = 'common-voice-data-download'
+REGION_NAME = 'us-west-2'
+BUCKET_NAME = 'voice-prod-bundler-ee1969a6ce8178826482b88e843c335139bd3fb4'
 FILES_TO_DOWNLOAD = [
-  {'filename': 'clips.tsv.zip', 'targetfolder': 'corpora'},
+  {'filename': 'clips.tsv.tar.gz', 'targetfolder': 'corpora'},
   {'filename': 'de.zip', 'targetfolder': 'corpora/de/audio'},
 ]
 

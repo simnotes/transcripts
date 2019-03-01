@@ -1,0 +1,97 @@
+Configuration
+  --train_batch_size 3 \
+  --dev_batch_size 3 \
+  --test_batch_size 3 \
+  --n_hidden 512 \
+  --learning_rate 0.0001 \
+  --epoch 50 \
+
+I Training of Epoch 49 - loss: 18.024566
+I FINISHED Optimization - training time: 21:40:06
+D Epochs - running: 0, done: 50
+100% (25627 of 25627) |####################################################| Elapsed Time: 0:25:55 Time:  0:25:55
+D Closing queues...
+D Queues closed.
+I0301 22:51:24.766684 139653263501120 basic_session_run_hooks.py:594] Saving checkpoints for 1281350 into /home/simon/.local/share/deepspeech/commonvoicefull/model.ckpt.
+D Session closed.
+D Stopping coordinator...
+D Coordinator stopped.
+Preprocessing ['/home/simon/dev/private/deepspeech/transcripts/corpora/de/test_file.csv']
+Preprocessing done
+2019-03-01 22:53:02.710249: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-01 22:53:02.710301: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-01 22:53:02.710310: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-01 22:53:02.710316: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-01 22:53:02.710478: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 4930 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2060, pci bus id: 0000:01:00.0, compute capability: 7.5)
+W0301 22:53:02.818943 139653263501120 deprecation.py:323] From /home/simon/miniconda3/envs/deepspeech/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+I0301 22:53:02.819893 139653263501120 saver.py:1280] Restoring parameters from /home/simon/.local/share/deepspeech/commonvoicefull/model.ckpt-1281350
+Computing acoustic model predictions...
+100% (8542 of 8542) |######################################################| Elapsed Time: 0:03:42 Time:  0:03:42
+Decoding predictions...
+100% (8542 of 8542) |######################################################| Elapsed Time: 0:45:02 Time:  0:45:02
+Test - WER: 0.351997, CER: 7.856708, loss: 37.732666
+--------------------------------------------------------------------------------
+WER: 3.000000, CER: 4.000000, loss: 5.312325
+ - src: "weitermachen"
+ - res: "bei der machen"
+--------------------------------------------------------------------------------
+WER: 3.000000, CER: 4.000000, loss: 16.388323
+ - src: "weitermachen"
+ - res: "bei der machen"
+--------------------------------------------------------------------------------
+WER: 3.000000, CER: 13.000000, loss: 68.673531
+ - src: "knallharter bodycheck"
+ - res: "kanal hat hat es die scheck"
+--------------------------------------------------------------------------------
+WER: 2.500000, CER: 9.000000, loss: 20.223913
+ - src: "ventilator einschalten"
+ - res: "wenn die nato ein schalten"
+--------------------------------------------------------------------------------
+WER: 2.500000, CER: 11.000000, loss: 20.648293
+ - src: "batterieladestand anzeigen"
+ - res: "das rila stand an sein"
+--------------------------------------------------------------------------------
+WER: 2.500000, CER: 14.000000, loss: 56.810741
+ - src: "dialogstatus zurücksetzen"
+ - res: "dialog status ecksätzen in wien"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 3.000000, loss: 5.428734
+ - src: "verstanden"
+ - res: "so standen"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 4.000000, loss: 9.225818
+ - src: "servus"
+ - res: "sehr wu"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 6.000000, loss: 10.352249
+ - src: "kikeriki"
+ - res: "die terek"
+--------------------------------------------------------------------------------
+WER: 2.000000, CER: 4.000000, loss: 12.535884
+ - src: "weitermachen"
+ - res: "bei vormachen"
+--------------------------------------------------------------------------------
+D Done.
+I Exporting the model...
+2019-03-01 23:42:20.018057: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-01 23:42:20.018098: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-01 23:42:20.018105: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-01 23:42:20.018112: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-01 23:42:20.018270: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 4930 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2060, pci bus id: 0000:01:00.0, compute capability: 7.5)
+2019-03-01 23:42:20.157971: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-01 23:42:20.158011: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-01 23:42:20.158018: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-01 23:42:20.158025: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-01 23:42:20.158171: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 4930 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2060, pci bus id: 0000:01:00.0, compute capability: 7.5)
+I0301 23:42:20.159037 139653263501120 saver.py:1280] Restoring parameters from /home/simon/.local/share/deepspeech/commonvoicefull/model.ckpt-1281350
+W0301 23:42:20.197036 139653263501120 deprecation.py:323] From /home/simon/miniconda3/envs/deepspeech/lib/python3.7/site-packages/tensorflow/python/tools/freeze_graph.py:232: convert_variables_to_constants (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.compat.v1.graph_util.convert_variables_to_constants
+W0301 23:42:20.197178 139653263501120 deprecation.py:323] From /home/simon/miniconda3/envs/deepspeech/lib/python3.7/site-packages/tensorflow/python/framework/graph_util_impl.py:246: extract_sub_graph (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.compat.v1.graph_util.extract_sub_graph
+I0301 23:42:20.212262 139653263501120 graph_util_impl.py:269] Froze 12 variables.
+I0301 23:42:20.229391 139653263501120 graph_util_impl.py:302] Converted 12 variables to const ops.
+I Models exported at /home/simon/dev/private/deepspeech/transcripts/corpora/de

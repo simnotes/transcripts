@@ -16,5 +16,5 @@ if __name__ == "__main__":
     if not path.exists(CORPUS_FILE_PATH):
         print("File {} not found. Aborting...".format(CORPUS_FILE_PATH))
         raise SystemExit
-    subprocess.run(["create-corpora", "-f", CORPUS_FILE_PATH, "-d", "corpora", "-l", "de"])
+    subprocess.run(["create-corpora", "-f", CORPUS_FILE_PATH, "-d", "corpora", "-l", "de", "-s", "3"])
     

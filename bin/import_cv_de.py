@@ -28,7 +28,7 @@ ALPHABET_FILTER = re.compile(pattern)
 def _convert_wav(path_prefix, filepath, sentence):
   wav_filename = path.splitext(filepath)[0] + ".wav"
   wav_path = path.abspath(path.join(path_prefix, wav_filename))
-  mp3_path = path.abspath(path.join(path_prefix, filepath))
+  mp3_path = path.abspath(path.join(path_prefix, filepath) + ".mp3")
   _maybe_convert_wav(mp3_path, wav_path)
   frames = int(subprocess.check_output(['soxi', '-s', wav_path], stderr=subprocess.STDOUT))
   wav_file_size = path.getsize(wav_path)
